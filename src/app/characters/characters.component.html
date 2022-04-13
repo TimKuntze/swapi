@@ -1,7 +1,5 @@
 <main>
-  <span class="spacer100"></span>
   <h1>Characters</h1>
-  <span class="spacer100"></span>
   <section class="overview">
     <mat-card class="card" *ngFor="let item of charactersData, index as i">
       <mat-card-header>
@@ -14,7 +12,7 @@
         <mat-card-subtitle>Height: {{item.height}} </mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button [routerLink]="['/detailViewCharacters/' + i]">More Informations</button>
+        <button mat-stroked-button [routerLink]="['/detailViewCharacters/' + i]">More Informations</button>
       </mat-card-actions>
     </mat-card>
   </section>

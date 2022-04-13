@@ -33,10 +33,5 @@ $starwars-API-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($starwars-API-theme);
 
-body {
-  font-family: 'Space Mono', monospace;
-  background-color: #efefef;
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html { height: 100vh; }
+body { min-height: 100vh; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #efefef; }
