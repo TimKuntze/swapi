@@ -18,7 +18,6 @@ export class CharactersComponent implements OnInit {
       this.charactersData = response['results'];
       console.log(this.charactersData)
     })
-
   }
 
 }

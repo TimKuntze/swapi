@@ -1,7 +1,6 @@
 <main>
-  <h1>Characters</h1>
   <section class="overview">
-    <mat-card class="card" *ngFor="let item of charactersData, index as i">
+    <mat-card class="card" *ngFor="let item of charactersData | slice:0:3, index as i">
       <mat-card-header>
       </mat-card-header>
       <img mat-card-image src="{{characterImages[i]}}" alt="{{item.name}} Picture">
@@ -16,5 +15,7 @@
       </mat-card-actions>
     </mat-card>
   </section>
-
+<div class="reload">
+  <mat-icon>repeat</mat-icon><p>(Reload for new set of characters)</p>
+</div>
 </main>
