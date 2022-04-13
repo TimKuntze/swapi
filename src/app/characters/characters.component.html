@@ -1,1 +1,22 @@
-gi
+<main>
+  <span class="spacer100"></span>
+  <h1>Characters</h1>
+  <span class="spacer100"></span>
+  <section class="overview">
+    <mat-card class="card" *ngFor="let item of charactersData, index as i">
+      <mat-card-header>
+      </mat-card-header>
+      <img mat-card-image src="{{characterImages[i]}}" alt="{{item.name}} Picture">
+      <mat-card-content>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>Birth Year: {{item.birth_year}} </mat-card-subtitle>
+        <mat-card-subtitle>Gender: {{item.gender}} </mat-card-subtitle>
+        <mat-card-subtitle>Height: {{item.height}} </mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/detailViewCharacters/' + i]">More Informations</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+
+</main>
