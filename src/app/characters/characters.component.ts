@@ -25,7 +25,7 @@ export class CharactersComponent implements OnInit {
   }
 
 // This is a method to shuffle the array charactersData, so we get 3 random characters. The used method is the Fisher-Yates Shuffle
-  shuffle() {
+  shuffleCharacters() {
     let index = this.charactersData.length, randomIndex, temp;
 
     // While there remain elements to shuffle.

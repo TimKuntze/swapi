@@ -1,12 +1,12 @@
 main {
-  padding-top: 220px;
+  padding-top: 200px;
   padding-right: 64px;
   padding-left: 64px;
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   object-fit: cover;
 
 }
@@ -17,6 +17,7 @@ img {
 }
 
 mat-card {
+  min-width: 220px;
   padding: 32px;
   margin: 16px;
 }
