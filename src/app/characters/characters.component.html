@@ -3,7 +3,6 @@
     <mat-card class="card" *ngFor="let item of charactersData | slice:0:3, index as i">
       <mat-card-header>
       </mat-card-header>
-      <img mat-card-image src="{{characterImages[i]}}" alt="{{item.name}} Picture">
       <mat-card-content>
         <mat-card-title>{{item.name}}</mat-card-title><br>
         <mat-card-subtitle>Birth Year: {{item.birth_year}} </mat-card-subtitle>
@@ -11,7 +10,7 @@
         <mat-card-subtitle>Height: {{item.height}} cm </mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-stroked-button [routerLink]="['/detailViewCharacters/' + i]">More Informations</button>
+        <button mat-stroked-button (click)="toggleShow()">More Informations</button>
       </mat-card-actions>
     </mat-card>
   </section>
@@ -19,3 +18,4 @@
   <mat-icon (click)="shuffleCharacters()">repeat</mat-icon><p>(Reload for new set of characters)</p>
 </div>
 </main>
+<app-details *ngIf="isShown"></app-details>
