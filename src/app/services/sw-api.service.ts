@@ -20,7 +20,7 @@ export class SwapiDataService {
     return chars;
   }
 
-  getCharacterById(id: any) {
+  getCharacterById(id: number) {
     return this.http.get('https://swapi.dev/api/people/' + id);
   }
 }
