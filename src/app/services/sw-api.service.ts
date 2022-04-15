@@ -8,7 +8,7 @@ export class SwapiDataService {
   constructor(public http: HttpClient) {}
 
   getAllCharacters() {
-    return this.http.get('https://swapi.dev/api/people/');
+    return this.http.get('https://www.swapi.tech/api/people/');
   }
 
   getCharacterById(id: number) {

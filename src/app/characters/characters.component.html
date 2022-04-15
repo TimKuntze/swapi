@@ -10,7 +10,7 @@
         <mat-card-subtitle>Height: {{item.height}} cm </mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-stroked-button routerLink="/characters/{{[i]}}" (click)="toggleShow()">More Informations</button>
+        <button mat-stroked-button routerLink="/characters/{{item.uid - 1}}" (click)="toggleShow()">More Informations</button>
       </mat-card-actions>
     </mat-card>
   </section>

@@ -24,6 +24,7 @@ export class CharactersComponent implements OnInit {
     this.data.getAllCharacters().subscribe((response: any) => {
       this.charactersData = response['results'];
       console.log(this.charactersData);
+      console.log(response);
     })
   }
 
@@ -40,7 +41,6 @@ export class CharactersComponent implements OnInit {
       this.charactersData[randomIndex] = this.charactersData[index];
       this.charactersData[index] = temp;
     }
-    console.log(this.charactersData);
   }
 
   toggleShow() {

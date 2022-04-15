@@ -20,7 +20,6 @@ export class DetailsComponent implements OnInit {
 
     this.route.paramMap.subscribe(param =>{
       let characterId = param.get('id');
-      console.log(characterId);
 
       if(characterId){
         this.data.getCharacterById(parseInt(characterId) + 1).subscribe(async(response:any)=>{
