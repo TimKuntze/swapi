@@ -13,15 +13,17 @@ export class CharactersComponent implements OnInit {
   constructor(public data: SwapiDataService) {
   }
 
+  isShown: boolean = false ; // hidden by default
+
   ngOnInit(): void {
     this.getCharacters();
-  }
 
-  isShown: boolean = false ; // hidden by default
+  }
 
   getCharacters() {
     this.data.getAllCharacters().subscribe((response: any) => {
       this.charactersData = response['results'];
+      console.log(this.charactersData);
     })
   }
 
