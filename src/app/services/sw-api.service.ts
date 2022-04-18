@@ -11,7 +11,7 @@ export class SwapiDataService {
    * Get character data from the Star Wars API
    */
   getAllCharacters() {
-    return this.http.get('https://www.swapi.tech/api/people/');
+    return this.http.get('https://www.swapi.tech/api/people');
   }
 
   /**

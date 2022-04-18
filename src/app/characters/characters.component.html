@@ -3,10 +3,6 @@
     <mat-card class="card" *ngFor="let item of charactersData | slice:0:3, index as i">
       <mat-card-content>
         <mat-card-title>{{item.name}}</mat-card-title>
-        <br>
-        <mat-card-subtitle>Birth Year: {{item.birth_year}} </mat-card-subtitle>
-        <mat-card-subtitle>Gender: {{item.gender}} </mat-card-subtitle>
-        <mat-card-subtitle>Height: {{item.height}} cm</mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
         <button (click)="toggleShow()" mat-stroked-button routerLink="/characters/{{item.uid}}">Details</button>

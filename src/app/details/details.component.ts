@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {SwapiDataService} from '../services/sw-api.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { SwapiDataService } from '../services/sw-api.service';
 
 @Component({
   selector: 'app-details',
@@ -21,7 +21,7 @@ export class DetailsComponent implements OnInit {
 
     /**
      * Method to the id of the clicked character
-     * @param  {Number} characterID ID of the clicked character.
+     * @param  {Number} characterID of the clicked character.
      */
     this.route.paramMap.subscribe(param => {
       let characterId = param.get('id');
@@ -29,10 +29,8 @@ export class DetailsComponent implements OnInit {
       if (characterId) {
         this.data.getCharacterById(parseInt(characterId)).subscribe(async (response: any) => {
           this.selectedCharacter = response;
-          console.log(this.selectedCharacter)
         });
       }
     });
   }
-
 }

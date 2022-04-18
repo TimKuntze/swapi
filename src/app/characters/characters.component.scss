@@ -2,12 +2,21 @@ main {
   padding-top: 200px;
   padding-right: 64px;
   padding-left: 64px;
+
+  @media only screen and (max-width: 600px) {
+      padding-right: 12px;
+      padding-left: 12px;
+  }
 }
 
 mat-card {
   min-width: 220px;
   padding: 32px;
   margin: 16px;
+  @media only screen and (max-width: 600px) {
+    min-width: 0px;
+    max-width: 200px;
+  }
 }
 
 mat-icon {
@@ -17,6 +26,11 @@ mat-icon {
 .overview {
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+  }
 }
 
 .reload {

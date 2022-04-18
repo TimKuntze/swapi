@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatChipsModule,
     MatDialogModule
   ],
   providers: [],

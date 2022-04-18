@@ -16,7 +16,7 @@ export class CharactersComponent implements OnInit {
   /**
    * Boolean to determine if details component is shown.
    */
-  isShown: boolean = false ;
+  isShown: boolean = false;
 
   constructor(public data: SwapiDataService) {
   }
@@ -60,4 +60,6 @@ export class CharactersComponent implements OnInit {
   toggleClose() {
     this.isShown = false;
   }
+
 }
+
