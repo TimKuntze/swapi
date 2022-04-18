@@ -1,21 +1,21 @@
 <main>
-  <section class="overview">
+  <div class="overview">
     <mat-card class="card" *ngFor="let item of charactersData | slice:0:3, index as i">
-      <mat-card-header>
-      </mat-card-header>
       <mat-card-content>
-        <mat-card-title>{{item.name}}</mat-card-title><br>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <br>
         <mat-card-subtitle>Birth Year: {{item.birth_year}} </mat-card-subtitle>
         <mat-card-subtitle>Gender: {{item.gender}} </mat-card-subtitle>
-        <mat-card-subtitle>Height: {{item.height}} cm </mat-card-subtitle>
+        <mat-card-subtitle>Height: {{item.height}} cm</mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-stroked-button routerLink="/characters/{{item.uid - 1}}" (click)="toggleShow()">More Informations</button>
+        <button (click)="toggleShow()" mat-stroked-button routerLink="/characters/{{item.uid}}">Details</button>
       </mat-card-actions>
     </mat-card>
-  </section>
-<div class="reload">
-  <mat-icon (click)="shuffleCharacters()">repeat</mat-icon><p>(Reload for new set of characters)</p>
-</div>
+  </div>
+  <div class="reload">
+    <mat-icon (click)="shuffleCharacters()" (click)="toggleClose()">repeat</mat-icon>
+    <p>(Reload for new set of characters)</p>
+  </div>
 </main>
 <app-details *ngIf="isShown"></app-details>

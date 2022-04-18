@@ -4,11 +4,6 @@ main {
   padding-left: 64px;
 }
 
-.overview {
-  display: flex;
-  justify-content: center;
-}
-
 mat-card {
   min-width: 220px;
   padding: 32px;
@@ -17,6 +12,11 @@ mat-card {
 
 mat-icon {
   cursor: pointer;
+}
+
+.overview {
+  display: flex;
+  justify-content: center;
 }
 
 .reload {
