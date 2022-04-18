@@ -2,7 +2,8 @@
   <div class="overview">
     <mat-card class="card" *ngFor="let item of charactersData | slice:0:3, index as i">
       <mat-card-content>
-        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-title>{{item.name}}</mat-card-title><br>
+        <mat-card-subtitle>ID: {{item.uid}}</mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
         <button (click)="toggleShow()" mat-stroked-button routerLink="/characters/{{item.uid}}">Details</button>
